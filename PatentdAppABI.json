@@ -1,0 +1,105 @@
+[
+  {
+    "type": "constructor",
+    "stateMutability": "undefined",
+    "payable": false,
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "name": "getAllPatents",
+    "constant": true,
+    "stateMutability": "view",
+    "payable": false,
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "tuple[]",
+        "name": "",
+        "components": [
+          { "type": "uint40", "name": "patentId" },
+          { "type": "string", "name": "name" },
+          { "type": "string", "name": "title" },
+          { "type": "string", "name": "description" },
+          { "type": "address", "name": "sender" },
+          { "type": "uint256", "name": "filingDate" },
+          { "type": "uint256", "name": "expirationDate" },
+          { "type": "bool", "name": "isApproved" }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "getPatent",
+    "constant": true,
+    "stateMutability": "view",
+    "payable": false,
+    "inputs": [{ "type": "uint40", "name": "patentId" }],
+    "outputs": [
+      {
+        "type": "tuple",
+        "name": "",
+        "components": [
+          { "type": "uint40", "name": "patentId" },
+          { "type": "string", "name": "name" },
+          { "type": "string", "name": "title" },
+          { "type": "string", "name": "description" },
+          { "type": "address", "name": "sender" },
+          { "type": "uint256", "name": "filingDate" },
+          { "type": "uint256", "name": "expirationDate" },
+          { "type": "bool", "name": "isApproved" }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "numberOfPatents",
+    "constant": true,
+    "stateMutability": "view",
+    "payable": false,
+    "inputs": [],
+    "outputs": [{ "type": "uint40", "name": "" }]
+  },
+  {
+    "type": "function",
+    "name": "patentExists",
+    "constant": true,
+    "stateMutability": "view",
+    "payable": false,
+    "inputs": [{ "type": "uint40", "name": "" }],
+    "outputs": [{ "type": "bool", "name": "" }]
+  },
+  {
+    "type": "function",
+    "name": "patents",
+    "constant": true,
+    "stateMutability": "view",
+    "payable": false,
+    "inputs": [{ "type": "uint256", "name": "" }],
+    "outputs": [
+      { "type": "uint40", "name": "patentId" },
+      { "type": "string", "name": "name" },
+      { "type": "string", "name": "title" },
+      { "type": "string", "name": "description" },
+      { "type": "address", "name": "sender" },
+      { "type": "uint256", "name": "filingDate" },
+      { "type": "uint256", "name": "expirationDate" },
+      { "type": "bool", "name": "isApproved" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "payPatentFee",
+    "constant": false,
+    "stateMutability": "payable",
+    "payable": true,
+    "inputs": [
+      { "type": "string", "name": "patentName" },
+      { "type": "string", "name": "patentTitle" },
+      { "type": "string", "name": "patentDescription" }
+    ],
+    "outputs": []
+  }
+]
